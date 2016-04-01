@@ -5,7 +5,7 @@ import os
 pwd=sys.path[0]
 
 # os.system('cat /proc/cpuinfo')
-f=open("account.txt")
+f=open("download.txt")
 errfile = open("err.log","w+")
 while True:
     line1 = f.readline().strip()
@@ -15,18 +15,14 @@ while True:
     line2 = line2+" "
     mkdir = "mkdir -p " + addr
     wget = "wget --load-cookies cookies.txt "+line2 +"-O "+addr+"/project.zip"
-    errfile.write("YORUENKLSDJ")
-    unzip = "unzip " + addr + "/project.zip -d "+addr
+    # errfile.write("YORUENKLSDJ")
+    unzip = "unzip " + addr + "/project.zip -d "+ addr
 
-
+    gitclone = "git clone "+line2 +" " + addr
     res = os.system(mkdir)
     if res:
         exit(0)
-    print wget
-    res = os.system(wget)
+    print gitclone
+    res = os.system(gitclone)
     if res:
-        errfile.write("Wget error: "+addr+"\n")
-    print unzip
-    res = os.system(unzip)
-    if res:
-        errfile.write("Unzip error: "+addr+"\n")
+        errfile.write("gitclone error: "+addr+"\n")

@@ -28,7 +28,9 @@ result = soup.find_all(has_class_project_row)
 for tags in result:
     for tag in tags.find_all(has_class_namespace_name):
         user = tag.string[:-2].strip()
-    for tag in tags.find_all(has_class_project_name):
-        print user+"/"+tag.string.strip()
-    print "http://172.16.13.236"+tags.a.get('href').lstrip()+"/repository/archive.zip"
+    # for tag in tags.find_all(has_class_project_name):
+    #     print user+"/"+tag.string.strip()
+    username = tags.a.get('href').split("/")
+    print username[1]+"/"+username[2]
+    print "git@172.16.13.236:"+tags.a.get('href').lstrip()[1:]+".git"
     # print "\n"
