@@ -39,7 +39,7 @@ go run combine.go > output.txt
 ~~ 3. 通过ls.py 文件生成代码库文件：repo.txt ,ls.py依赖于ls.log文件。 ~~
 ~~ ```  ~~
 ~~ ./ls.py > repo.txt  ~~
-~~ ```  ～～
+~~ ```  ~~
 
 1. 用之前生成的download.txt下载
 4. 在server端通过download.py文件下载代码库，该文件依赖于download.txt文件。
