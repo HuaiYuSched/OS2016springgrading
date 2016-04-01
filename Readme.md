@@ -41,6 +41,7 @@ go run combine.go > output.txt
 ~~ ./ls.py > repo.txt  ~~
 ~~ ```  ～～(deprecated))
 1. 登陆gitlab服务器
+2. 因为网络不稳定，最好使用tmux。tmux attach-session -t grade
 2. 进入grade文件夹
 3. 在server端通过download.py文件下载代码库，该文件依赖于download.txt文件。
 
