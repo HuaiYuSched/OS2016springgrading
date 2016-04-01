@@ -34,15 +34,15 @@ go run combine.go > output.txt
 如果download过程中出现了错误，将会被记录在err.log 中，根据错误记录可以选择性的人工重做。
 
 #代码下载(git clone 后台版)  
-~~ 1. 在后台git文件夹下执行ls * > ls.log  ~~
+(deprecated)~~ 1. 在后台git文件夹下执行ls * > ls.log  ~~
 ~~ 2. 手动删除一些不用的文件夹如 tmp teacher   ~~
 ~~ 3. 通过ls.py 文件生成代码库文件：repo.txt ,ls.py依赖于ls.log文件。 ~~
 ~~ ```  ~~
 ~~ ./ls.py > repo.txt  ~~
-~~ ```  ~~
-
-1. 用之前生成的download.txt下载
-4. 在server端通过download.py文件下载代码库，该文件依赖于download.txt文件。
+~~ ```  ～～(deprecated))
+1. 登陆gitlab服务器
+2. 进入grade文件夹
+3. 在server端通过download.py文件下载代码库，该文件依赖于download.txt文件。
 
 ```
 ./download.py
