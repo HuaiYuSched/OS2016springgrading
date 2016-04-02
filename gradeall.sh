@@ -20,11 +20,13 @@ total_score=0
 graded_repo=''
 
 function grade() {
+    git pull -f 
     cp $GRADESH tools/grade.sh
     score_line=`make grade 2>/dev/null | grep "Total Score" | egrep -o "[0-9]+/[0-9]+"`
     log "score_line: $score_line"
+    make clean
     if [[ -z "$score_line" ]]; then
-	score=0
+	    score=0
     else
 	score=${score_line%/*}
 	total_score=${score_line#*/}

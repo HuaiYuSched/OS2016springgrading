@@ -53,8 +53,13 @@ go run combine.go > output.txt
 #评分
 1. 将lab中的tools/grade.sh文件复制在workdir下。
 2. 修改grade.sh文件，对lab变量和gradesh变量修改为对应的lab和之前拷贝的grade.sh文件。
+3. 进入container
 3. 执行grade.sh文件。该文件依赖于grade.sh文件并生成summary.txt和log.txt文件。
 4. 将summary.txt 文件和finallist学生名单用stat.sh合并，生成成绩文件。该命令依赖于summary.txt和finallist文件，并生成score.txt文件
+```
+sudo docker start -i -a gradecontainer
+```
+
 
 ```
 ./stat.py > score.txt
