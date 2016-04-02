@@ -38,8 +38,9 @@ go run combine.go > output.txt
 ~~ 2. 手动删除一些不用的文件夹如 tmp teacher   ~~
 ~~ 3. 通过ls.py 文件生成代码库文件：repo.txt ,ls.py依赖于ls.log文件。 ~~
 ~~ ```  ~~
-~~ ./ls.py > repo.txt  ~~
-~~ ```  ～～(deprecated))
+~~ ./ls.py > repo.txt ~~
+~~ ```  ～～(deprecated))    
+
 1. 登陆gitlab服务器
 2. 因为网络不稳定，最好使用tmux。tmux attach-session -t grade
 2. 进入grade文件夹
